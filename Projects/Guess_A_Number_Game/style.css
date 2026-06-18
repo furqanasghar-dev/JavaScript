@@ -1,0 +1,141 @@
+/* I have used Ai for better Styling and design of Game.*/
+
+
+/* --- Global Reset & Typography --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #121212; /* Deep dark background */
+  color: #ffffff;
+  /* Flexbox to perfectly center the game card on the screen */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; 
+}
+
+/* --- Main Game Container --- */
+#wrapper {
+  width: 90%;
+  max-width: 450px; /* Responsive max width */
+  background-color: #1e1e1e;
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6); /* Soft shadow for depth */
+  text-align: center;
+}
+
+/* --- Headings & Paragraphs --- */
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+  color: #4facfe; /* Vibrant blue accent */
+  letter-spacing: 1px;
+}
+
+#wrapper > p {
+  font-size: 1rem;
+  color: #a0a0a0;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+/* --- Form Elements --- */
+.form {
+  margin: 35px 0;
+}
+
+#guess {
+  display: block;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: #e0e0e0;
+}
+
+#guessField {
+  width: 80%;
+  max-width: 250px;
+  height: 60px;
+  font-size: 28px;
+  border: 2px solid #333;
+  border-radius: 10px;
+  background-color: #2c2c2c;
+  color: #fff;
+  text-align: center;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+/* Lights up the input border when typing */
+#guessField:focus {
+  border-color: #4facfe; 
+}
+
+/* --- Buttons --- */
+#subt, 
+.button span { /* Targets both your submit button and your JS-created Start Game button */
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  color: #000;
+  width: 80%;
+  max-width: 220px;
+  height: 50px;
+  border-radius: 25px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  margin-top: 25px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#subt:hover, 
+.button span:hover {
+  transform: translateY(-3px); /* Slightly lifts the button on hover */
+  box-shadow: 0 8px 20px rgba(79, 172, 254, 0.4);
+}
+
+#subt:active, 
+.button span:active {
+  transform: translateY(0);
+}
+
+/* --- Results Area --- */
+.resultParas {
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid #333; /* Separator line */
+}
+
+.resultParas p {
+  color: #fff;
+  font-size: 1.1rem;
+  margin: 12px 0;
+}
+
+/* Highlights the numbers inside the results */
+.guesses, 
+.lastResult {
+  font-weight: bold;
+  color: #ff9800; /* Orange highlight */
+  padding: 4px 10px;
+  border-radius: 6px;
+  background-color: rgba(255, 152, 0, 0.1);
+  letter-spacing: 2px;
+}
+
+/* "Too High" / "Too Low" message styling */
+.lowOrHi h2 {
+  margin-top: 20px;
+  font-size: 1.4rem;
+  color: #ff5252; /* Reddish color for hints */
+  font-weight: 500;
+}
